@@ -1,6 +1,7 @@
 require 'erb'
 require 'webrick'
 
+# require './page_generator_with_layout.rb'
 root = File.expand_path 'public'
 
 server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => root
@@ -22,7 +23,6 @@ Dir['views/*.html.erb'].each do |file|
     res.body        = process_erb(layout_string, req) {main_contents}
   end
 end
-
 
 ## ===========
 

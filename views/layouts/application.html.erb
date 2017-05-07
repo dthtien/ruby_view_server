@@ -15,6 +15,18 @@
     <hr />
     <div>
       <%= yield %>
+      <form method='post' action="<%= @request.path %>">
+          First name: <input type="text" name="first_name" placeholder='first name'/><br />
+          Last name: 
+          <input type="text" name="last_name">
+          <br>
+          <input type="submit" value="Submit" name="submit" />
+      </form>
+      <% if @request.query['submit'] %>
+        Hello there <%= "#{@request.query['first_name']} #{@request.query['last_name']}" %>
+      <% else %>
+        Enter thy name
+      <% end %>
     </div>
     <hr />
     <div>
