@@ -17,7 +17,7 @@ There is homework associated with this demo, after each section you will need to
 
 Then go to the directory
 
-    $ cd ruby_view_server
+    $ cd ruby_view_server 
 
 And open up this project in your favorite text editor. Follow along with instructions.
 
